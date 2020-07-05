@@ -56,24 +56,24 @@ simple_transcription	medium	ktx	0.2221875	Above rescaled by ktx for simple trans
 simple_transcription	strong	ktx	0.4775625	Above rescaled by ktx for simple transcription
 
 
-transcription_switch	Switch	ktx	0.064	ON switch transcription rate 
-transcription_switch	Switch	kleak	0.007	OFF switch transcription rate 
-transcription_switch	Switch	kdeg	0.176	Activator-Inhibitor complex degradation rate 
+transcription_switch	Genelet	ktx	0.064	ON switch transcription rate 
+transcription_switch	Genelet	kleak	0.007	OFF switch transcription rate 
+transcription_switch	Genelet	kdeg	0.176	Activator-Inhibitor complex degradation rate 
 
 
-transcription_switch	Switch	kM_tx	0.0259	ON switch transcription eqm const *10^5
-transcription_switch	Switch	kM_leak	 0.1050	OFF switch transcription eqm const *10^5
-transcription_switch	Switch	kM_deg	0.0091	Activator-Inhibitor degradation eqm const *10^5
+transcription_switch	Genelet	kM_tx	0.0259	ON switch transcription eqm const *10^5
+transcription_switch	Genelet	kM_leak	 0.1050	OFF switch transcription eqm const *10^5
+transcription_switch	Genelet	kM_deg	0.0091	Activator-Inhibitor degradation eqm const *10^5
 
 
-transcription_switch	Switch	kb_tx	1	ON switch-RNAP binding 
-transcription_switch	Switch	kb_leak	1	OFF switch-RNAP binding 
-transcription_switch	Switch	kb_deg	1	Activator-Inhibitor-RNAseH binding 
+transcription_switch	Genelet	kb_tx	1	ON switch-RNAP binding 
+transcription_switch	Genelet	kb_leak	1	OFF switch-RNAP binding 
+transcription_switch	Genelet	kb_deg	1	Activator-Inhibitor-RNAseH binding 
 
 
-transcription_switch	Switch	kon	0.0394	Switch activation rate *10^-5
-transcription_switch	Switch	koff	0.696	Switch inhibition rate *10^-5
-transcription_switch	Switch	ka	0.696	Switch activator annihilation rate *10^-5
+transcription_switch	Genelet	kon	0.0394	Switch activation rate *10^-5
+transcription_switch	Genelet	koff	0.696	Switch inhibition rate *10^-5
+transcription_switch	Genelet	ka	0.696	Switch activator annihilation rate *10^-5
 
 
 transcription_mm	Source	ktx	2.4710	Source transcription rate
