@@ -18,4 +18,4 @@ from genelet import *
 
 ## Other important information
 
-\#Kanye2020
+Try ```help(Genelet)``` or ```help(Source)``` or ```help(TranscriptionalSwitch)``` for more info.
