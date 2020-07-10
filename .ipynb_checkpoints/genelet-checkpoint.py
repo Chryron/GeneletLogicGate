@@ -54,9 +54,9 @@ class TranscriptionSwitch(Mechanism):
         kleak = component.get_parameter("kleak", part_id = part_id, mechanism = self)
         kdeg = component.get_parameter("kdeg", part_id = part_id, mechanism = self)
         
-        kb_tx = component.get_parameter("kb_tx", part_id = part_id, mechanism = self)
-        kb_leak = component.get_parameter("kb_leak", part_id = part_id, mechanism = self)
-        kb_deg = component.get_parameter("kb_deg", part_id = part_id, mechanism = self)
+        ku_tx = component.get_parameter("ku_tx", part_id = part_id, mechanism = self)
+        ku_leak = component.get_parameter("ku_leak", part_id = part_id, mechanism = self)
+        ku_deg = component.get_parameter("ku_deg", part_id = part_id, mechanism = self)
         
         kM_tx = component.get_parameter("kM_tx", part_id = part_id, mechanism = self)
         kM_leak = component.get_parameter("kM_leak", part_id = part_id, mechanism = self)
@@ -66,13 +66,13 @@ class TranscriptionSwitch(Mechanism):
         koff = component.get_parameter("koff", part_id = part_id, mechanism = self)
         ka = component.get_parameter("ka", part_id = part_id, mechanism = self)
             
-        #ku_tx = (kb_tx + ktx) / kM_tx
-        #ku_leak = (kb_leak + kleak) / kM_leak
-        #ku_deg = (kb_deg + kdeg) / kM_deg
+        kb_tx = (ku_tx + ktx) / kM_tx
+        kb_leak = (ku_leak + kleak) / kM_leak
+        kb_deg = (ku_deg + kdeg) / kM_deg
         
-        ku_tx = 0.1
-        ku_leak = 0.1
-        ku_deg = 0.1
+        #ku_tx = 0.1
+        #ku_leak = 0.1
+        #ku_deg = 0.1
         
         # Create reactions
         

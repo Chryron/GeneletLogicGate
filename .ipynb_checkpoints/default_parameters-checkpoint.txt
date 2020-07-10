@@ -61,19 +61,18 @@ transcription_switch	Genelet	kleak	0.007	OFF switch transcription rate
 transcription_switch	Genelet	kdeg	0.176	Activator-Inhibitor complex degradation rate 
 
 
-transcription_switch	Genelet	kM_tx	0.0259	ON switch transcription eqm const *10^5
-transcription_switch	Genelet	kM_leak	 0.1050	OFF switch transcription eqm const *10^5
-transcription_switch	Genelet	kM_deg	0.0091	Activator-Inhibitor degradation eqm const *10^5
+transcription_switch	Genelet	kM_tx	259e-3	ON switch transcription eqm const (uM)
+transcription_switch	Genelet	kM_leak	 1.05	OFF switch transcription eqm const (uM)
+transcription_switch	Genelet	kM_deg	91e-3	Activator-Inhibitor degradation eqm const (uM)
 
 
-transcription_switch	Genelet	kb_tx	1	ON switch-RNAP binding 
-transcription_switch	Genelet	kb_leak	1	OFF switch-RNAP binding 
-transcription_switch	Genelet	kb_deg	1	Activator-Inhibitor-RNAseH binding 
+transcription_switch	Genelet	ku_tx	10	ON switch-RNAP binding 
+transcription_switch	Genelet	ku_leak	10	OFF switch-RNAP binding 
+transcription_switch	Genelet	ku_deg	10	Activator-Inhibitor-RNAseH binding 
 
 
-transcription_switch	Genelet	kon	0.0394	Switch activation rate *10^-5
-transcription_switch	Genelet	koff	0.696	Switch inhibition rate *10^-5
-transcription_switch	Genelet	ka	0.696	Switch activator annihilation rate *10^-5
-
+transcription_switch	Genelet	kon	3.94e-3	Switch activation rate (/uM s)
+transcription_switch	Genelet	koff	6.96e-2	Switch inhibition rate (/uM s)
+transcription_switch	Genelet	ka	6.96e-2	Switch activator annihilation rate (/uM s)
 
 transcription_mm	Source	ktx	2.4710	Source transcription rate
