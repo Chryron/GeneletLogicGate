@@ -52,18 +52,17 @@ simple_translation	weak	ktl	0.06	Above rescaled by ktl for simple translation
 	medium	ktx	8.438818565	Anderson promoter (1185x) strengths are proportional but gain factor is arbitrary
 	strong	ktx	3.926187672	Anderson promoter (2547x) strengths are proportional but gain factor is arbitrary
 simple_transcription	weak	ktx	0.0031875	Above rescaled by ktx for simple transcription
-simple_transcription	medium	ktx	0.2221875	Above rescaled by ktx for simple transcription
-simple_transcription	strong	ktx	0.4775625	Above rescaled by ktx for simple transcription
+simple_transcription	medium	ktx	0.0696	Above rescaled by ktx for simple transcription
+simple_transcription	strong	ktx	2.471	Above rescaled by ktx for simple transcription
 transcription_switch	Genelet	ktx	0.064	ON switch transcription rate 
 transcription_switch	Genelet	kleak	0.007	OFF switch transcription rate 
 transcription_switch	Genelet	kdeg	0.176	Activator-Inhibitor complex degradation rate 
-transcription_switch	Genelet	kM_tx	259e-3	ON switch transcription eqm const (uM)
+transcription_switch	Genelet	kM_tx	0.259	ON switch transcription eqm const (uM)
 transcription_switch	Genelet	kM_leak	1.05	OFF switch transcription eqm const (uM)
-transcription_switch	Genelet	kM_deg	91e-3	Activator-Inhibitor degradation eqm const (uM)
+transcription_switch	Genelet	kM_deg	0.091	Activator-Inhibitor degradation eqm const (uM)
 transcription_switch	Genelet	ku_tx	10	ON switch-RNAP binding 
 transcription_switch	Genelet	ku_leak	10	OFF switch-RNAP binding 
 transcription_switch	Genelet	ku_deg	10	Activator-Inhibitor-RNAseH binding 
-transcription_switch	Genelet	kon	3.94e-3	Switch activation rate (/uM s)
-transcription_switch	Genelet	koff	6.96e-2	Switch inhibition rate (/uM s)
-transcription_switch	Genelet	ka	6.96e-2	Switch activator annihilation rate (/uM s)
-transcription_mm	Source	ktx	0.064	Source transcription rate
+transcription_switch	Genelet	kon	0.00394	Switch activation rate (/uM s)
+transcription_switch	Genelet	koff	0.0696	Switch inhibition rate (/uM s)
+transcription_switch	Genelet	ka	0.0696	Switch activator annihilation rate (/uM s)
