@@ -27,26 +27,42 @@ class TranscriptionSwitch(Mechanism):
     
     def update_species(self, switch_off, transcript, activator, inhibitor, rnap, rnaseH, activator2 = None, inhibitor2 = None, **keywords):
         
-        # Return appropriate species depending on whether or not 2nd set of activators and inhibitors are present 
-        
-        if activator2 != None and inhibitor2 != None:
-            return [switch_off, transcript, activator, inhibitor, rnap, rnaseH, activator2, inhibitor2] 
-        else:
-            return [switch_off, transcript, activator, inhibitor, rnap, rnaseH] 
-            
-    
-    def update_reactions(self, switch_off, transcript, activator, inhibitor, component, part_id, rnap, rnaseH, activator2 = None, inhibitor2 = None, **keywords):
-        
         # Create appropriate complex species depending on whether or not 2nd set of activators and inhibitors are present
+        
         
         if activator2 != None and inhibitor2 != None:
             A_I_complex2 = ComplexSpecies([inhibitor2, activator2],name = str(switch_off).replace("_OFF","")+"_AI_2")
             switch_on = ComplexSpecies([switch_off, activator], name = str(switch_off).replace("_OFF","_ON_1"))
             switch_on2 = ComplexSpecies([switch_off, activator2], name = str(switch_off).replace("_OFF","_ON_2"))
+            self.switch_on2 = switch_on2
+            self.A_I_complex2 = A_I_complex2
         else:     
             switch_on = ComplexSpecies([switch_off, activator], name = str(switch_off).replace("_OFF","_ON"))
-        A_I_complex = ComplexSpecies([inhibitor, activator],name = str(switch_off).replace("_OFF","")+"_AI")
         
+
+        A_I_complex = ComplexSpecies([inhibitor, activator],name = str(switch_off).replace("_OFF","")+"_AI")
+        self.switch_on = switch_on
+        self.A_I_complex = A_I_complex
+        
+        # Return appropriate species depending on whether or not 2nd set of activators and inhibitors are present 
+        
+        if activator2 != None and inhibitor2 != None:
+            return [switch_off, switch_on, switch_on2, transcript, activator, inhibitor, rnap, rnaseH, activator2, inhibitor2, A_I_complex, A_I_complex2,
+                   ComplexSpecies([rnap, switch_on]), ComplexSpecies([rnap, switch_off]), ComplexSpecies([rnaseH, A_I_complex]),
+                   ComplexSpecies([rnap, switch_on2]), ComplexSpecies([rnaseH, A_I_complex2])] 
+        else:
+            return [switch_off, switch_on, transcript, activator, inhibitor, rnap, rnaseH, A_I_complex,
+                   ComplexSpecies([rnap, switch_on]), ComplexSpecies([rnap, switch_off]), ComplexSpecies([rnaseH, A_I_complex])] 
+            
+    
+    def update_reactions(self, switch_off, transcript, activator, inhibitor, component, part_id, rnap, rnaseH, activator2 = None, inhibitor2 = None, **keywords):
+        
+        if activator2 != None and inhibitor2 != None:
+            A_I_complex2 = self.A_I_complex2
+            switch_on2 = self.switch_on2     
+            
+        switch_on = self.switch_on 
+        A_I_complex = self.A_I_complex
         
         # Initialise reaction parameters
         
@@ -162,7 +178,7 @@ class Genelet(Promoter):
             self.activator2 = None
             self.inhibitor2 = None
         
-        custom_mechanisms = {"transcription": TranscriptionSwitch()}
+        custom_mechanisms = {"transcription": TranscriptionSwitch()} 
         
         Promoter.__init__(self, name = name, transcript = transcript, mechanisms = custom_mechanisms, **keywords)
 
