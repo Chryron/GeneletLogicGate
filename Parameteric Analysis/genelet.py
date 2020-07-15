@@ -25,80 +25,34 @@ class TranscriptionSwitch(Mechanism):
         
             Mechanism.__init__(self, name=name, mechanism_type=mechanism_type)
     
-    def update_species(self, switch_off, transcript, activator, inhibitor, rnap, rnaseH, activator2 = None, inhibitor2 = None, **keywords):
+    def update_species(self, switch_off, switch_on, transcript, activator, inhibitor, rnap, rnaseH, A_I_complex, switch_on2 = None, A_I_complex2 = None, activator2 = None,
+                       inhibitor2 = None, **keywords):
+        
         
         # Return appropriate species depending on whether or not 2nd set of activators and inhibitors are present 
         
         if activator2 != None and inhibitor2 != None:
-            return [switch_off, transcript, activator, inhibitor, rnap, rnaseH, activator2, inhibitor2] 
+            return [switch_off, switch_on, switch_on2, transcript, activator, inhibitor, rnap, rnaseH, activator2, inhibitor2, A_I_complex, A_I_complex2] 
         else:
-            return [switch_off, transcript, activator, inhibitor, rnap, rnaseH] 
+            return [switch_off, switch_on, transcript, activator, inhibitor, rnap, rnaseH, A_I_complex] 
             
     
-    def update_reactions(self, switch_off, transcript, activator, inhibitor, component, part_id, rnap, rnaseH, activator2 = None, inhibitor2 = None, **keywords):
-        
-        # Create appropriate complex species depending on whether or not 2nd set of activators and inhibitors are present
-        
-        if activator2 != None and inhibitor2 != None:
-            A_I_complex2 = ComplexSpecies([inhibitor2, activator2],name = str(switch_off).replace("_OFF","")+"_AI_2")
-            switch_on = ComplexSpecies([switch_off, activator], name = str(switch_off).replace("_OFF","_ON_1"))
-            switch_on2 = ComplexSpecies([switch_off, activator2], name = str(switch_off).replace("_OFF","_ON_2"))
-        else:     
-            switch_on = ComplexSpecies([switch_off, activator], name = str(switch_off).replace("_OFF","_ON"))
-        A_I_complex = ComplexSpecies([inhibitor, activator],name = str(switch_off).replace("_OFF","")+"_AI")
-        
+    def update_reactions(self, switch_off, switch_on, transcript, activator, inhibitor, rnap, rnaseH, A_I_complex, part_id, component = None, switch_on2 = None,
+                         A_I_complex2 = None, activator2 = None, inhibitor2 = None, **keywords):
         
         # Initialise reaction parameters
-        
-        ktx = component.get_parameter("ktx", part_id = part_id, mechanism = self)
-        kleak = component.get_parameter("kleak", part_id = part_id, mechanism = self)
-        kdeg = component.get_parameter("kdeg", part_id = part_id, mechanism = self)
-        
-        ku_tx = component.get_parameter("ku_tx", part_id = part_id, mechanism = self)
-        ku_leak = component.get_parameter("ku_leak", part_id = part_id, mechanism = self)
-        ku_deg = component.get_parameter("ku_deg", part_id = part_id, mechanism = self)
-        
-        kM_tx = component.get_parameter("kM_tx", part_id = part_id, mechanism = self)
-        kM_leak = component.get_parameter("kM_leak", part_id = part_id, mechanism = self)
-        kM_deg = component.get_parameter("kM_deg", part_id = part_id, mechanism = self)
         
         kon = component.get_parameter("kon", part_id = part_id, mechanism = self)
         koff = component.get_parameter("koff", part_id = part_id, mechanism = self)
         ka = component.get_parameter("ka", part_id = part_id, mechanism = self)
-            
-        kb_tx = (ku_tx + ktx) / kM_tx
-        kb_leak = (ku_leak + kleak) / kM_leak
-        kb_deg = (ku_deg + kdeg) / kM_deg
-        
-        #ku_tx = 0.1
-        #ku_leak = 0.1
-        #ku_deg = 0.1
         
         # Create reactions
         
         reaction_activation_1 = Reaction(inputs = [switch_off, activator], outputs = [switch_on], 
                             k = kon )
-        
         reaction_deactivation_1 = Reaction(inputs = [switch_on, inhibitor], outputs = [switch_off, A_I_complex], 
                             k = koff )
-        
         reaction_complex_1 = Reaction(inputs = [activator, inhibitor], outputs = [A_I_complex], k = ka)
-        
-        # Step 1 of transcription and A-I degradation reactions for first set of A/I
-        
-        reaction_tx_1_1 = Reaction(inputs = [switch_on, rnap], outputs = [ComplexSpecies([rnap, switch_on])], k = kb_tx, k_rev = ku_tx )
-        
-        reaction_leak_1 = Reaction(inputs = [switch_off, rnap], outputs = [ComplexSpecies([rnap, switch_off])], k = kb_leak, k_rev = ku_leak)
-        
-        reaction_deg_1_1 = Reaction(inputs = [A_I_complex, rnaseH], outputs = [ComplexSpecies([rnaseH, A_I_complex])], k = kb_deg, k_rev = ku_deg)
-        
-        # Step 2 of transcription and A-I degradation reactions for first set of A/I
-        
-        reaction_tx_2_1 = Reaction(inputs = [ComplexSpecies([rnap, switch_on])], outputs = [switch_on, transcript, rnap], k = ktx)
-        
-        reaction_leak_2 = Reaction(inputs = [ComplexSpecies([rnap, switch_off])], outputs = [switch_off, transcript, rnap], k = kleak)
-        
-        reaction_deg_2_1 = Reaction(inputs = [ComplexSpecies([rnaseH, A_I_complex])], outputs = [rnaseH, activator], k = kdeg)
         
         # Reactions if second set of activators and inhibitors are present
         
@@ -106,30 +60,13 @@ class TranscriptionSwitch(Mechanism):
             
             reaction_activation_2 = Reaction(inputs = [switch_off, activator2], outputs = [switch_on2], 
                             k = kon )
-        
             reaction_deactivation_2 = Reaction(inputs = [switch_on2, inhibitor2], outputs = [switch_off, A_I_complex2], 
                             k = koff )
-        
             reaction_complex_2 = Reaction(inputs = [activator2, inhibitor2], outputs = [A_I_complex2], k = ka)
             
-            # Step 1 of transcription and A-I degradation reactions for second set of A/I
-    
-            reaction_tx_1_2 = Reaction(inputs = [switch_on2, rnap], outputs = [ComplexSpecies([rnap, switch_on2])], k = kb_tx, k_rev = ku_tx )
+            return [reaction_activation_1, reaction_deactivation_1, reaction_complex_1, reaction_activation_2, reaction_deactivation_2, reaction_complex_2]
             
-            reaction_deg_1_2 = Reaction(inputs = [A_I_complex2, rnaseH], outputs = [ComplexSpecies([rnaseH, A_I_complex2])], k = kb_deg, k_rev = ku_deg)
-            
-            # Step 2 of transcription and A-I degradation reactions for second set of A/I
-        
-            reaction_tx_2_2 = Reaction(inputs = [ComplexSpecies([rnap, switch_on2])], outputs = [switch_on2, transcript, rnap], k = ktx)
-        
-            reaction_deg_2_2 = Reaction(inputs = [ComplexSpecies([rnaseH, A_I_complex2])], outputs = [rnaseH, activator2], k = kdeg)
-            
-            return [reaction_activation_1, reaction_deactivation_1, reaction_complex_1, reaction_tx_1_1, reaction_tx_2_1, reaction_leak_1, reaction_leak_2,
-                reaction_deg_1_1, reaction_deg_2_1, reaction_activation_2, reaction_deactivation_2, reaction_complex_2, reaction_tx_1_2, reaction_tx_2_2,
-                reaction_deg_1_2, reaction_deg_2_2]
-            
-        return [reaction_activation_1, reaction_deactivation_1, reaction_complex_1, reaction_tx_1_1, reaction_tx_2_1, reaction_leak_1, reaction_leak_2,
-                reaction_deg_1_1, reaction_deg_2_1]
+        return [reaction_activation_1, reaction_deactivation_1, reaction_complex_1]
   
 
 
@@ -152,6 +89,27 @@ class Genelet(Promoter):
         self.rnap = self.set_species(rnap, material_type = "protein")
         self.rnaseH = self.set_species(rnaseH, material_type = "protein")
         
+        
+        if activator2 != None and inhibitor2 != None:
+            self.activator2 = self.set_species(activator2, material_type = "dna") 
+            self.inhibitor2 = self.set_species(inhibitor2, material_type = "rna")
+            
+            A_I_complex2 = ComplexSpecies([self.inhibitor2, self.activator2],name = str(name) + "_AI_2")
+            switch_on = ComplexSpecies([self.switch_off, self.activator], name = str(name) + "_ON_1")
+            switch_on2 = ComplexSpecies([self.switch_off, self.activator2], name = str(name) + "_ON_2")
+            
+            self.switch_on2 = switch_on2
+            self.A_I_complex2 = A_I_complex2
+        else:     
+            switch_on = ComplexSpecies([self.switch_off, self.activator], name = str(name) + "_ON")
+        
+        A_I_complex = ComplexSpecies([self.inhibitor, self.activator], name = str(name) +"_AI")
+        
+        self.switch_on = switch_on
+        self.A_I_complex = A_I_complex
+        
+        
+        
         # Set second activator and inhibitors depending on whether they are present in the input
         
         if activator2 != None and inhibitor2 != None:
@@ -162,13 +120,16 @@ class Genelet(Promoter):
             self.activator2 = None
             self.inhibitor2 = None
         
-        custom_mechanisms = {"transcription": TranscriptionSwitch()}
+        custom_mechanisms = {"transcription": TranscriptionSwitch(), "catalysis": MichalisMentenCopy(), "degradation": MichalisMenten()} 
         
         Promoter.__init__(self, name = name, transcript = transcript, mechanisms = custom_mechanisms, **keywords)
 
     def update_species(self, **keywords):
         
         mech_tx = self.mechanisms["transcription"]
+        mech_cat = self.mechanisms["catalysis"]
+        mech_deg = self.mechanisms["degradation"]
+
         
         species = [] 
         
@@ -176,15 +137,47 @@ class Genelet(Promoter):
         
         if self.activator2 != None and self.inhibitor2 != None:
             species += mech_tx.update_species(switch_off = self.switch_off, transcript = self.transcript, activator = self.activator, inhibitor = self.inhibitor, 
-                                          rnap = self.rnap, rnaseH = self.rnaseH, activator2 = self.activator2, inhibitor2 = self.inhibitor2)
+                                              rnap = self.rnap, rnaseH = self.rnaseH, activator2 = self.activator2, inhibitor2 = self.inhibitor2,
+                                              switch_on = self.switch_on, A_I_complex = self.A_I_complex, switch_on2 = self.switch_on2, A_I_complex2 = self.A_I_complex2)
+            
+            species += mech_cat.update_species(Enzyme = self.rnap, Sub = self.switch_on2, Prod = self.transcript)
+            species += mech_deg.update_species(Enzyme = self.rnaseH, Sub = self.A_I_complex2, Prod = self.inhibitor)
+        
+            
         else:
             species += mech_tx.update_species(switch_off = self.switch_off, transcript = self.transcript, activator = self.activator, inhibitor = self.inhibitor, 
-                                          rnap = self.rnap, rnaseH = self.rnaseH)
+                                          rnap = self.rnap, rnaseH = self.rnaseH, switch_on = self.switch_on, A_I_complex = self.A_I_complex)
+            
+        species += mech_cat.update_species(Enzyme = self.rnap, Sub = self.switch_on, Prod = self.transcript)
+        species += mech_cat.update_species(Enzyme = self.rnap, Sub = self.switch_off, Prod = self.transcript)
+        species += mech_deg.update_species(Enzyme = self.rnaseH, Sub = self.A_I_complex, Prod = self.activator)
+        
         
         return species
 
     def update_reactions(self, **keywords):
+        
         mech_tx = self.mechanisms["transcription"]
+        mech_cat = self.mechanisms["catalysis"]
+        mech_deg = self.mechanisms["degradation"]
+        part_id = "Genelet"
+        
+        ktx = self.get_parameter("ktx", part_id = part_id)
+        kleak = self.get_parameter("kleak", part_id = part_id)
+        kdeg = self.get_parameter("kdeg", part_id = part_id)
+        
+        ku_tx = self.get_parameter("ku_tx", part_id = part_id)
+        ku_leak = self.get_parameter("ku_leak", part_id = part_id)
+        ku_deg = self.get_parameter("ku_deg", part_id = part_id)
+        
+        kM_tx = self.get_parameter("kM_tx", part_id = part_id)
+        kM_leak = self.get_parameter("kM_leak", part_id = part_id)
+        kM_deg = self.get_parameter("kM_deg", part_id = part_id)
+            
+        kb_tx = (ku_tx + ktx) / kM_tx
+        kb_leak = (ku_leak + kleak) / kM_leak
+        kb_deg = (ku_deg + kdeg) / kM_deg
+        
         
         reactions = []
         
@@ -193,10 +186,20 @@ class Genelet(Promoter):
         if self.activator2 != None and self.inhibitor2 != None:
             reactions += mech_tx.update_reactions(switch_off = self.switch_off, transcript = self.transcript, activator = self.activator, inhibitor = self.inhibitor, 
                                                   rnap = self.rnap, rnaseH = self.rnaseH, activator2 = self.activator2, inhibitor2 = self.inhibitor2,
-                                                  component = self, part_id = "Genelet", **keywords)
+                                                  switch_on = self.switch_on, A_I_complex = self.A_I_complex, switch_on2 = self.switch_on2, A_I_complex2 = self.A_I_complex2,
+                                                  component = self, part_id = part_id, **keywords)
+            reactions += mech_cat.update_reactions(Enzyme = self.rnap, Sub = self.switch_on2, Prod = self.transcript, kb = kb_tx, ku = ku_tx, kcat = ktx)
+            reactions += mech_deg.update_reactions(Enzyme = self.rnaseH, Sub = self.A_I_complex2, Prod = self.inhibitor, kb = kb_deg, ku = ku_deg, kcat = kdeg)
+        
         else:
             reactions += mech_tx.update_reactions(switch_off = self.switch_off, transcript = self.transcript, activator = self.activator, inhibitor = self.inhibitor, 
-                                                  rnap = self.rnap, rnaseH = self.rnaseH, component = self, part_id = "Genelet", **keywords)
+                                                  rnap = self.rnap, rnaseH = self.rnaseH, switch_on = self.switch_on, A_I_complex = self.A_I_complex,
+                                                  component = self, part_id = part_id, **keywords)
+            
+        reactions += mech_cat.update_reactions(Enzyme = self.rnap, Sub = self.switch_on, Prod = self.transcript, kb = kb_tx, ku = ku_tx, kcat = ktx)
+        reactions += mech_cat.update_reactions(Enzyme = self.rnap, Sub = self.switch_off, Prod = self.transcript, kb = kb_leak, ku = ku_leak, kcat = kleak)
+        reactions += mech_deg.update_reactions(Enzyme = self.rnaseH, Sub = self.A_I_complex, Prod = self.inhibitor, kb = kb_deg, ku = ku_deg, kcat = kdeg)
+        
         return reactions
     
 class Source(Promoter):
