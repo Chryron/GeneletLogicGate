@@ -67,3 +67,4 @@ transcription_switch	Genelet	kon	3.94e-3	Switch activation rate (/uM s)
 transcription_switch	Genelet	koff	6.96e-2	Switch inhibition rate (/uM s)
 transcription_switch	Genelet	ka	6.96e-2	Switch activator annihilation rate (/uM s)
 transcription_mm	Source	ktx	0.064	Source transcription rate
+	RNAse	kcat	2.3	kcat RNAse

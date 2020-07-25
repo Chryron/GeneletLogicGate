@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model id="biocrnpyler_393035" name="biocrnpyler_393035" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
+    <listOfUnitDefinitions>
+      <unitDefinition id="square_metre">
+        <listOfUnits>
+          <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="default" name="default" spatialDimensions="3" size="1e-06" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="Sw1_OFF" name="Sw1_OFF" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_ON" name="complex_Sw1_ON" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I31" name="rna_I31" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_A1" name="dna_A1" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I1" name="rna_I1" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_RNAP" name="protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_RNAseH" name="protein_RNAseH" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_AI" name="complex_Sw1_AI" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_ON_protein_RNAP" name="complex_Sw1_ON_protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_OFF_protein_RNAP" name="complex_Sw1_OFF_protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_AI_protein_RNAseH" name="complex_Sw1_AI_protein_RNAseH" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Sw2_OFF" name="Sw2_OFF" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_ON" name="complex_Sw2_ON" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I32" name="rna_I32" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_A2" name="dna_A2" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I2" name="rna_I2" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_AI" name="complex_Sw2_AI" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_ON_protein_RNAP" name="complex_Sw2_ON_protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_OFF_protein_RNAP" name="complex_Sw2_OFF_protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_AI_protein_RNAseH" name="complex_Sw2_AI_protein_RNAseH" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Sw3_OFF" name="Sw3_OFF" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_ON_1" name="complex_Sw3_ON_1" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_ON_2" name="complex_Sw3_ON_2" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I4" name="rna_I4" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_A31" name="dna_A31" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_A32" name="dna_A32" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_AI" name="complex_Sw3_AI" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_AI_2" name="complex_Sw3_AI_2" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_ON_2_protein_RNAP" name="complex_Sw3_ON_2_protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_AI_2_protein_RNAseH" name="complex_Sw3_AI_2_protein_RNAseH" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_ON_1_protein_RNAP" name="complex_Sw3_ON_1_protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_OFF_protein_RNAP" name="complex_Sw3_OFF_protein_RNAP" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_AI_protein_RNAseH" name="complex_Sw3_AI_protein_RNAseH" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfReactions>
+      <reaction id="r0" name="r0" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.00394</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw1_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_A1" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw1_OFF </ci>
+              <ci> dna_A1 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.00394"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r1" name="r1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I1" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw1_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="complex_Sw1_AI" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON </ci>
+              <ci> rna_I1 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r2" name="r2" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_A1" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I1" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_AI" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> dna_A1 </ci>
+              <ci> rna_I1 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r3" name="r3" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=38.857142857142854</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON </ci>
+              <ci> protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="38.8571428571429"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r3_1" name="r3_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r5" name="r5" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.064</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I31" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.064"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r6" name="r6" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=9.53047619047619</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw1_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw1_OFF </ci>
+              <ci> protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="9.53047619047619"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r6_1" name="r6_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw1_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_OFF_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r8" name="r8" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.007</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw1_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I31" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_OFF_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.007"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9" name="r9" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=111.82417582417582</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_AI" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_AI </ci>
+              <ci> protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="111.824175824176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9_1" name="r9_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_AI" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_AI_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r11" name="r11" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.176</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_A1" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_AI_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r12" name="r12" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.00394</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw2_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_A2" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw2_OFF </ci>
+              <ci> dna_A2 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.00394"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r13" name="r13" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I2" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw2_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="complex_Sw2_AI" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON </ci>
+              <ci> rna_I2 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r14" name="r14" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_A2" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I2" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_AI" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> dna_A2 </ci>
+              <ci> rna_I2 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15" name="r15" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=38.857142857142854</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON </ci>
+              <ci> protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="38.8571428571429"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15_1" name="r15_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r17" name="r17" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.064</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I32" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.064"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r18" name="r18" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=9.53047619047619</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw2_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw2_OFF </ci>
+              <ci> protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="9.53047619047619"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r18_1" name="r18_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw2_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_OFF_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r20" name="r20" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.007</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw2_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I32" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_OFF_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.007"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r21" name="r21" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=111.82417582417582</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_AI" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_AI </ci>
+              <ci> protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="111.824175824176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r21_1" name="r21_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_AI" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_AI_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r23" name="r23" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.176</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_A2" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_AI_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r24" name="r24" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.00394</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw3_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_A31" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_1" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw3_OFF </ci>
+              <ci> dna_A31 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.00394"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r25" name="r25" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_1" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I31" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw3_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="complex_Sw3_AI" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_1 </ci>
+              <ci> rna_I31 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r26" name="r26" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_A31" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I31" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> dna_A31 </ci>
+              <ci> rna_I31 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r27" name="r27" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.00394</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw3_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_A32" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_2" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw3_OFF </ci>
+              <ci> dna_A32 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.00394"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r28" name="r28" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_2" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I32" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw3_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="complex_Sw3_AI_2" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_2 </ci>
+              <ci> rna_I32 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r29" name="r29" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_A32" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I32" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI_2" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> dna_A32 </ci>
+              <ci> rna_I32 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30" name="r30" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=38.857142857142854</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_2" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_2_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_2 </ci>
+              <ci> protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="38.8571428571429"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30_1" name="r30_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_2_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_2" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_2_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r32" name="r32" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.064</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_2_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_2" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I4" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_2_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.064"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r33" name="r33" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=111.82417582417582</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_2" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI_2_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_2 </ci>
+              <ci> protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="111.824175824176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r33_1" name="r33_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_2_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI_2" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_2_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r35" name="r35" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.176</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_2_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_A32" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_2_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r36" name="r36" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=38.857142857142854</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_1" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_1_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_1 </ci>
+              <ci> protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="38.8571428571429"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r36_1" name="r36_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_1_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_1" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_1_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r38" name="r38" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.064</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_1_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_1" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I4" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_1_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.064"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r39" name="r39" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=9.53047619047619</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw3_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw3_OFF </ci>
+              <ci> protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="9.53047619047619"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r39_1" name="r39_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw3_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_OFF_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r41" name="r41" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.007</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_OFF_protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw3_OFF" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I4" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_OFF_protein_RNAP </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.007"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r42" name="r42" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=111.82417582417582</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI </ci>
+              <ci> protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="111.824175824176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r42_1" name="r42_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r44" name="r44" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.176</PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_A31" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_protein_RNAseH </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
