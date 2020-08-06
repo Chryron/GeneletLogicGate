@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model id="combined_model_of__combined_model_of__external_reservoir_model_combined_model_of__complex_membrane_combined_model_of__biocrnpyler_60297" substanceUnits="mole" timeUnits="second" volumeUnits="litre" areaUnits="square_metre" lengthUnits="metre" extentUnits="mole">
+    <listOfUnitDefinitions>
+      <unitDefinition id="square_metre">
+        <listOfUnits>
+          <unit kind="metre" exponent="2" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_second">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="substance">
+        <listOfUnits>
+          <unit kind="dimensionless" exponent="1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cell_2_external_combined" name="cell_2_external" spatialDimensions="3" size="2e-06" units="litre" constant="true"/>
+      <compartment id="cell_2_internal_combined" name="cell_2_internal" spatialDimensions="3" size="1e-06" units="litre" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="rna_I4_external_reservoir_model_1_combined" name="rna_I4" compartment="cell_2_external_combined" initialConcentration="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="transport_protein" name="transport_protein" compartment="cell_2_internal_combined" initialAmount="100" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I4_transport_protein" name="rna_I4_transport_protein" compartment="cell_2_internal_combined" initialConcentration="0" substanceUnits="substance" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Sw1_OFF_biocrnpyler_60297" name="Sw1_OFF" compartment="cell_2_internal_combined" initialAmount="2000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_ON_biocrnpyler_60297" name="complex_Sw1_ON" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I3_biocrnpyler_60297" name="rna_I3" compartment="cell_2_internal_combined" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_A1_biocrnpyler_60297" name="dna_A1" compartment="cell_2_internal_combined" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I1_biocrnpyler_60297" name="rna_I1" compartment="cell_2_internal_combined" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_RNAP_biocrnpyler_60297" name="protein_RNAP" compartment="cell_2_internal_combined" initialAmount="500" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="protein_RNAseH_biocrnpyler_60297" name="protein_RNAseH" compartment="cell_2_internal_combined" initialAmount="10" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_AI_biocrnpyler_60297" name="complex_Sw1_AI" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_ON_protein_RNAP_biocrnpyler_60297" name="complex_Sw1_ON_protein_RNAP" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_OFF_protein_RNAP_biocrnpyler_60297" name="complex_Sw1_OFF_protein_RNAP" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw1_AI_protein_RNAseH_biocrnpyler_60297" name="complex_Sw1_AI_protein_RNAseH" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Sw2_OFF_biocrnpyler_60297" name="Sw2_OFF" compartment="cell_2_internal_combined" initialAmount="2000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_ON_biocrnpyler_60297" name="complex_Sw2_ON" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_A2_biocrnpyler_60297" name="dna_A2" compartment="cell_2_internal_combined" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I2_biocrnpyler_60297" name="rna_I2" compartment="cell_2_internal_combined" initialAmount="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_AI_biocrnpyler_60297" name="complex_Sw2_AI" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_ON_protein_RNAP_biocrnpyler_60297" name="complex_Sw2_ON_protein_RNAP" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_OFF_protein_RNAP_biocrnpyler_60297" name="complex_Sw2_OFF_protein_RNAP" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw2_AI_protein_RNAseH_biocrnpyler_60297" name="complex_Sw2_AI_protein_RNAseH" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="Sw3_OFF_biocrnpyler_60297" name="Sw3_OFF" compartment="cell_2_internal_combined" initialAmount="2000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_ON_biocrnpyler_60297" name="complex_Sw3_ON" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="rna_I4_1_1_combined" name="rna_I4" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="dna_A3_biocrnpyler_60297" name="dna_A3" compartment="cell_2_internal_combined" initialAmount="2000" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_AI_biocrnpyler_60297" name="complex_Sw3_AI" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_ON_protein_RNAP_biocrnpyler_60297" name="complex_Sw3_ON_protein_RNAP" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_OFF_protein_RNAP_biocrnpyler_60297" name="complex_Sw3_OFF_protein_RNAP" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="complex_Sw3_AI_protein_RNAseH_biocrnpyler_60297" name="complex_Sw3_AI_protein_RNAseH" compartment="cell_2_internal_combined" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="kb" name="kb" value="0.01" units="per_second" constant="false"/>
+      <parameter id="kd" name="kd" value="0.2" units="per_second" constant="false"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="r1" reversible="true">
+        <listOfReactants>
+          <speciesReference species="rna_I4_external_reservoir_model_1_combined" stoichiometry="1" constant="false"/>
+          <speciesReference species="transport_protein" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_I4_transport_protein" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kb </ci>
+                <ci> rna_I4_external_reservoir_model_1_combined </ci>
+                <ci> transport_protein </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kd </ci>
+                <ci> rna_I4_transport_protein </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r2" reversible="true">
+        <listOfReactants>
+          <speciesReference species="rna_I4_transport_protein" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="rna_I4_1_1_combined" stoichiometry="1" constant="false"/>
+          <speciesReference species="transport_protein" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> kd </ci>
+                <ci> rna_I4_transport_protein </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kb </ci>
+                <ci> rna_I4_1_1_combined </ci>
+                <ci> transport_protein </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r0_biocrnpyler_60297" name="r0" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.00394  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw1_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_A1_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw1_OFF_biocrnpyler_60297 </ci>
+              <ci> dna_A1_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.00394"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r1_biocrnpyler_60297" name="r1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I1_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw1_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="complex_Sw1_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON_biocrnpyler_60297 </ci>
+              <ci> rna_I1_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r2_biocrnpyler_60297" name="r2" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_A1_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I1_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> dna_A1_biocrnpyler_60297 </ci>
+              <ci> rna_I1_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r3_biocrnpyler_60297" name="r3" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=38.857142857142854  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON_biocrnpyler_60297 </ci>
+              <ci> protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="38.8571428571429"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r3_1_biocrnpyler_60297" name="r3_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r5_biocrnpyler_60297" name="r5" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.064  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_ON_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.064"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r6_biocrnpyler_60297" name="r6" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=9.53047619047619  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw1_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw1_OFF_biocrnpyler_60297 </ci>
+              <ci> protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="9.53047619047619"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r6_1_biocrnpyler_60297" name="r6_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw1_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_OFF_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r8_biocrnpyler_60297" name="r8" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.007  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw1_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_OFF_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.007"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9_biocrnpyler_60297" name="r9" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=111.82417582417582  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_AI_biocrnpyler_60297 </ci>
+              <ci> protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="111.824175824176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r9_1_biocrnpyler_60297" name="r9_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw1_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_AI_protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r11_biocrnpyler_60297" name="r11" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.176  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw1_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_A1_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw1_AI_protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r12_biocrnpyler_60297" name="r12" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.00394  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw2_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_A2_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw2_OFF_biocrnpyler_60297 </ci>
+              <ci> dna_A2_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.00394"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r13_biocrnpyler_60297" name="r13" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I2_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw2_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="complex_Sw2_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON_biocrnpyler_60297 </ci>
+              <ci> rna_I2_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r14_biocrnpyler_60297" name="r14" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_A2_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I2_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> dna_A2_biocrnpyler_60297 </ci>
+              <ci> rna_I2_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15_biocrnpyler_60297" name="r15" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=38.857142857142854  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON_biocrnpyler_60297 </ci>
+              <ci> protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="38.8571428571429"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r15_1_biocrnpyler_60297" name="r15_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r17_biocrnpyler_60297" name="r17" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.064  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_ON_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.064"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r18_biocrnpyler_60297" name="r18" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=9.53047619047619  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw2_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw2_OFF_biocrnpyler_60297 </ci>
+              <ci> protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="9.53047619047619"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r18_1_biocrnpyler_60297" name="r18_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw2_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_OFF_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r20_biocrnpyler_60297" name="r20" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.007  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw2_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_OFF_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.007"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r21_biocrnpyler_60297" name="r21" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=111.82417582417582  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_AI_biocrnpyler_60297 </ci>
+              <ci> protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="111.824175824176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r21_1_biocrnpyler_60297" name="r21_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw2_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_AI_protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r23_biocrnpyler_60297" name="r23" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.176  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw2_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_A2_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw2_AI_protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r24_biocrnpyler_60297" name="r24" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.00394  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw3_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="dna_A3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw3_OFF_biocrnpyler_60297 </ci>
+              <ci> dna_A3_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.00394"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r25_biocrnpyler_60297" name="r25" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw3_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="complex_Sw3_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_biocrnpyler_60297 </ci>
+              <ci> rna_I3_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r26_biocrnpyler_60297" name="r26" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.0696  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="dna_A3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> dna_A3_biocrnpyler_60297 </ci>
+              <ci> rna_I3_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.0696"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r27_biocrnpyler_60297" name="r27" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=38.857142857142854  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_biocrnpyler_60297 </ci>
+              <ci> protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="38.8571428571429"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r27_1_biocrnpyler_60297" name="r27_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r29_biocrnpyler_60297" name="r29" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.064  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_ON_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_ON_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I4_1_1_combined" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_ON_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.064"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30_biocrnpyler_60297" name="r30" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=9.53047619047619  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="Sw3_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> Sw3_OFF_biocrnpyler_60297 </ci>
+              <ci> protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="9.53047619047619"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r30_1_biocrnpyler_60297" name="r30_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw3_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_OFF_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r32_biocrnpyler_60297" name="r32" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.007  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_OFF_protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="Sw3_OFF_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="rna_I4_1_1_combined" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAP_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_OFF_protein_RNAP_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.007"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r33_biocrnpyler_60297" name="r33" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=111.82417582417582  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_biocrnpyler_60297 </ci>
+              <ci> protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="111.824175824176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r33_1_biocrnpyler_60297" name="r33_1" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=10.0  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="complex_Sw3_AI_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="10"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="r35_biocrnpyler_60297" name="r35" reversible="false">
+        <annotation>
+          <PropensityType> type=massaction k=0.176  </PropensityType>
+        </annotation>
+        <listOfReactants>
+          <speciesReference species="complex_Sw3_AI_protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="dna_A3_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+          <speciesReference species="protein_RNAseH_biocrnpyler_60297" stoichiometry="1" constant="false"/>
+        </listOfProducts>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> complex_Sw3_AI_protein_RNAseH_biocrnpyler_60297 </ci>
+            </apply>
+          </math>
+          <listOfLocalParameters>
+            <localParameter id="k" value="0.176"/>
+          </listOfLocalParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

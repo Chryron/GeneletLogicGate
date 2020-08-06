@@ -71,9 +71,9 @@ class Genelet(Promoter):
     """
     Genelet switch component using TranscriptionSwitch() mechanism
     Arguments: name, transcript, activator, inhibitor
-    Optional Arguments: activator2, inhibitor2, rnap, rnaseH, rnase
+    Optional Arguments: activator2, inhibitor2, rnap, rnaseH
     """
-    def __init__(self, name, transcript, activator, inhibitor, rnap="RNAP", rnaseH="RNAseH", rnase="RNAse", activator2 = None, inhibitor2 = None,  **keywords):
+    def __init__(self, name, transcript, activator, inhibitor, rnap="RNAP", rnaseH="RNAseH", activator2 = None, inhibitor2 = None,  **keywords):
         
         # Set the Regulator
         # Component.set_species(species, material_type = None, attributes = None)
@@ -85,7 +85,7 @@ class Genelet(Promoter):
         self.switch_off = self.set_species(str(name)+"_OFF")
         self.rnap = self.set_species(rnap, material_type = "protein")
         self.rnaseH = self.set_species(rnaseH, material_type = "protein")
-        self.rnase = self.set_species(rnase, material_type = "protein")
+        
         
         if activator2 != None and inhibitor2 != None:
             self.activator2 = self.set_species(activator2, material_type = "dna") 
@@ -134,12 +134,12 @@ class Genelet(Promoter):
         
         if self.activator2 != None and self.inhibitor2 != None:
             species += mech_tx.update_species(switch_off = self.switch_off, transcript = self.transcript, activator = self.activator, inhibitor = self.inhibitor, 
-                                              rnap = self.rnap, rnaseH = self.rnaseH, rnase = self.rnase, activator2 = self.activator2, inhibitor2 = self.inhibitor2,
+                                              rnap = self.rnap, rnaseH = self.rnaseH, activator2 = self.activator2, inhibitor2 = self.inhibitor2,
                                               switch_on = self.switch_on, A_I_complex = self.A_I_complex, switch_on2 = self.switch_on2, A_I_complex2 = self.A_I_complex2)
             
             species += mech_cat.update_species(Enzyme = self.rnap, Sub = self.switch_on2, Prod = self.transcript)
             species += mech_deg.update_species(Enzyme = self.rnaseH, Sub = self.A_I_complex2, Prod = self.activator2)
-            species += mech_deg.update_species(Enzyme = self.rnase, Sub = self.inhibitor2, Prod = None)
+        
             
         else:
             species += mech_tx.update_species(switch_off = self.switch_off, transcript = self.transcript, activator = self.activator, inhibitor = self.inhibitor, 
@@ -148,7 +148,7 @@ class Genelet(Promoter):
         species += mech_cat.update_species(Enzyme = self.rnap, Sub = self.switch_on, Prod = self.transcript)
         species += mech_cat.update_species(Enzyme = self.rnap, Sub = self.switch_off, Prod = self.transcript)
         species += mech_deg.update_species(Enzyme = self.rnaseH, Sub = self.A_I_complex, Prod = self.activator)
-        species += mech_deg.update_species(Enzyme = self.rnase, Sub = self.inhibitor, Prod = None)
+        
         
         return species
 
@@ -170,9 +170,7 @@ class Genelet(Promoter):
         kM_tx = self.get_parameter("kM_tx", part_id = part_id)
         kM_leak = self.get_parameter("kM_leak", part_id = part_id)
         kM_deg = self.get_parameter("kM_deg", part_id = part_id)
-        
-        kcat = self.get_parameter("kcat", part_id = "RNase")
-                    
+            
         kb_tx = (ku_tx + ktx) / kM_tx
         kb_leak = (ku_leak + kleak) / kM_leak
         kb_deg = (ku_deg + kdeg) / kM_deg
@@ -189,7 +187,6 @@ class Genelet(Promoter):
                                                   component = self, part_id = part_id, **keywords)
             reactions += mech_cat.update_reactions(Enzyme = self.rnap, Sub = self.switch_on2, Prod = self.transcript, kb = kb_tx, ku = ku_tx, kcat = ktx)
             reactions += mech_deg.update_reactions(Enzyme = self.rnaseH, Sub = self.A_I_complex2, Prod = self.activator2, kb = kb_deg, ku = ku_deg, kcat = kdeg)
-            reactions += mech_deg.update_reactions(Enzyme = self.rnase, Sub = self.inhibitor2, Prod = None, kcat = kcat, component = self)
         
         else:
             reactions += mech_tx.update_reactions(switch_off = self.switch_off, transcript = self.transcript, activator = self.activator, inhibitor = self.inhibitor, 
@@ -199,7 +196,7 @@ class Genelet(Promoter):
         reactions += mech_cat.update_reactions(Enzyme = self.rnap, Sub = self.switch_on, Prod = self.transcript, kb = kb_tx, ku = ku_tx, kcat = ktx)
         reactions += mech_cat.update_reactions(Enzyme = self.rnap, Sub = self.switch_off, Prod = self.transcript, kb = kb_leak, ku = ku_leak, kcat = kleak)
         reactions += mech_deg.update_reactions(Enzyme = self.rnaseH, Sub = self.A_I_complex, Prod = self.activator, kb = kb_deg, ku = ku_deg, kcat = kdeg)
-        reactions += mech_deg.update_reactions(Enzyme = self.rnase, Sub = self.inhibitor, Prod = None, kcat = kcat, component = self)
+        
         return reactions
     
 class Source(Promoter):
